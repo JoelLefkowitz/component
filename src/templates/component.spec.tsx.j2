@@ -1,0 +1,11 @@
+import { {{ name | pascal_case }}, {{ name | pascal_case }}Props } from './Component';
+
+import renderer from 'react-test-renderer';
+
+export const props: {{ name | pascal_case }}Props = {};
+
+test('{{ name | pascal_case }} can render.', () => {
+  const component = renderer.create(<{{ name | pascal_case }} {...props}></{{ name | pascal_case }}>);
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});

@@ -1,0 +1,11 @@
+import './{{ name | kebab_case }}.scss';
+
+import { Box } from '@material-ui/core';
+
+export interface {{ name | pascal_case }}Props {}
+
+export function {{ name | pascal_case }}(props: {{ name | pascal_case }}Props = {}): JSX.Element {
+  return (
+    <Box className="{{ name | kebab_case }}-container" />
+  );
+}
